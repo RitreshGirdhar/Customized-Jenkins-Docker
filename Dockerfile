@@ -15,8 +15,10 @@ add-apt-repository \
     stable" && \
 apt-get update && \
 apt-get -y install docker-ce
+
 RUN apt-get install -y docker-ce
 RUN usermod -a -G docker jenkins
+RUN apt-get update && apt-get install -y maven
 
 
 ENV JENKINS_REF /usr/share/jenkins/ref
