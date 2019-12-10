@@ -11,7 +11,7 @@ docker build -t 'jenkins-with-docker' .
 ```
 
 ```
-docker run -d -p 8080:8080 --name "jenkins-with-docker" jenkins-with-docker
+docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
 ```
 
 
