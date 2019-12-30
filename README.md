@@ -1,4 +1,4 @@
-# jenkins-with-docker
+# Customize jenkins docker image - includes pre-configured jobs
 
 This sample application will help you in building a custom jenkins docker image which contains pre-installed plugins and sample jobs.
 
