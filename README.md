@@ -18,3 +18,6 @@ For Windows
 ```
 docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(where docker):/usr/bin/docker jenkins-with-docker
 ```
+
+
+![Alt text](/images/jenkins-set-up-with-default-job.png?raw=true "Jenkins with default job")
