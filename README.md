@@ -9,7 +9,7 @@ My requirement was to share our current CI/CD pipeline jobs with the list of plu
 ```
 docker build -t 'jenkins-with-docker' .
 ```
-For Linux 
+For Linux & Mac
 ```
 docker run -d -p 8080:8080 --name "jenkins-with-docker" -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins-with-docker
 ```
