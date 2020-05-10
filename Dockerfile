@@ -1,5 +1,4 @@
-FROM jenkins/jenkins:lts
-
+FROM jenkins/jenkins
 
 USER root
 RUN apt-get update && \
@@ -23,8 +22,11 @@ RUN apt-get update && apt-get install -y maven
 
 ENV JENKINS_REF /usr/share/jenkins/ref
 COPY jenkins-home/plugins.txt $JENKINS_REF/
-RUN /usr/local/bin/plugins.sh $JENKINS_REF/plugins.txt
 
+################# Plugins Set up start #################
+RUN mkdir -p $JENKINS_REF/plugins
+#COPY jenkins-home/plugins/* $JENKINS_REF/plugins/
+################# Plugins Set up ends #################
 
 COPY jenkins-home/*.* $JENKINS_REF/
 COPY jenkins-home/userContent $JENKINS_REF/userContent
